@@ -14,9 +14,9 @@ ACCESS_SECRET = environ['ACCESS_SECRET']
 
 #create an OAuthHandler instance
 # Twitter requires all requests to use OAuth for authentication
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret) 
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET) 
 
-auth.set_access_token(access_token, access_secret)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
  #Construct the API instance
 api = tweepy.API(auth) # create an API object
 
