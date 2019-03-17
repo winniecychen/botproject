@@ -50,9 +50,13 @@ while True:
                     url = 'https://twitter.com/' + str(user_displayname) + '/status/' + str(tweet_id)
                     api.update_status(phrase + '\n' + url)    
                     print ("Replied with " + phrase)
-        except tweepy.TweepError as e:
+        except tweepy.RateLimitError as e:
             print(e.reason)
             time.sleep(900)
+        except tweepy.TweepError as e:
+            print(e.reason)
+            if (e.message[0]['code'] != 187):
+               time.sleep(900)
         except StopIteration:
             break
     print("Finished going through 100 tweets in timeline. Beginning sleep for 15 minutes")
