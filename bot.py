@@ -2,14 +2,15 @@
 
 import tweepy
 import Tkinter
+import time
 from secrets import *
-from time import sleep
 
-from os import environ
-CONSUMER_KEY = environ['CONSUMER_KEY']
-CONSUMER_SECRET = environ['CONSUMER_SECRET']
-ACCESS_KEY = environ['ACCESS_KEY']
-ACCESS_SECRET = environ['ACCESS_SECRET']
+
+#from os import environ
+#CONSUMER_KEY = environ['CONSUMER_KEY']
+#CONSUMER_SECRET = environ['CONSUMER_SECRET']
+#ACCESS_KEY = environ['ACCESS_KEY']
+#ACCESS_SECRET = environ['ACCESS_SECRET']
 
 #create an OAuthHandler instance
 # Twitter requires all requests to use OAuth for authentication
@@ -49,11 +50,12 @@ while True:
                     url = 'https://twitter.com/' + str(user_displayname) + '/status/' + str(tweet_id)
                     api.update_status(phrase + '\n' + url)    
                     print ("Replied with " + phrase)
-                    time.sleep(interval)
         except tweepy.TweepError as e:
-            print(e.reason) 
+            print(e.reason)
         except StopIteration:
             break
+    time.sleep(900)
+    
         
 
 
