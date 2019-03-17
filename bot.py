@@ -1,16 +1,16 @@
 #bot.py
 
 import tweepy
-import Tkinter
+#import Tkinter
 import time
 from secrets import *
 
 
-#from os import environ
-#CONSUMER_KEY = environ['CONSUMER_KEY']
-#CONSUMER_SECRET = environ['CONSUMER_SECRET']
-#ACCESS_KEY = environ['ACCESS_KEY']
-#ACCESS_SECRET = environ['ACCESS_SECRET']
+from os import environ
+CONSUMER_KEY = environ['CONSUMER_KEY']
+CONSUMER_SECRET = environ['CONSUMER_SECRET']
+ACCESS_KEY = environ['ACCESS_KEY']
+ACCESS_SECRET = environ['ACCESS_SECRET']
 
 #create an OAuthHandler instance
 # Twitter requires all requests to use OAuth for authentication
@@ -52,6 +52,7 @@ while True:
                     print ("Replied with " + phrase)
         except tweepy.TweepError as e:
             print(e.reason)
+            time.sleep(900)
         except StopIteration:
             break
     time.sleep(900)
