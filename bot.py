@@ -5,7 +5,6 @@ import tweepy
 import time
 #from secrets import *
 
-
 from os import environ
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
