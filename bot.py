@@ -37,7 +37,6 @@ phrase = 'do you mean the rebels who are TEMPORARILY occuying the legal territor
 #        print(e.reason)
 #    except StopIteration:
 #        break
-
 interval = 60*20
 while True:  
     for tweet in tweepy.Cursor(api.home_timeline).items(100):
