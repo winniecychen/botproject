@@ -2,6 +2,7 @@
 
 import tweepy
 #import Tkinter
+import datetime
 import time
 #from secrets import *
 
@@ -38,6 +39,7 @@ phrase = 'do you mean the rebels who are TEMPORARILY occupying the legal territo
 #        break
 
 while True:  
+    print("Starting twitter scraping at " + str(datetime.datetime.now()))
     for tweet in tweepy.Cursor(api.home_timeline).items(100):
         try:
             if tweet.user.screen_name is not 'winniecychen': 
@@ -53,6 +55,7 @@ while True:
             time.sleep(900)
         except StopIteration:
             break
+    print("Finished going through 100 tweets in timeline. Beginning sleep for 15 minutes")
     time.sleep(900)
     
         
