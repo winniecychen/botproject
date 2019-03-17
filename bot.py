@@ -19,7 +19,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
  #Construct the API instance
 api = tweepy.API(auth) # create an API object
 
-search = 'Chinese'
+search = 'China'
 phrase = 'do you mean the rebels who are TEMPORARILY occuying the legal territories of the republic of china?'
 
 
