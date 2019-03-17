@@ -3,7 +3,7 @@
 import tweepy
 #import Tkinter
 import time
-from secrets import *
+#from secrets import *
 
 
 from os import environ
