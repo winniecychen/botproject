@@ -20,7 +20,7 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth) # create an API object
 
 search = 'China'
-phrase = 'do you mean the rebels who are TEMPORARILY occuying the legal territories of the republic of china?'
+phrase = 'do you mean the rebels who are TEMPORARILY occupying the legal territories of the republic of china?'
 
 
 #for tweet in tweepy.Cursor(api.search, search).items(500):
